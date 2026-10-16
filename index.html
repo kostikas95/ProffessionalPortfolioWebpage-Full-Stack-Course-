@@ -1,0 +1,144 @@
+<!DOTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My portfolio webpage">
+    <title>Portfolio Webpage </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-intro">
+            <h1>Kostas Iliadis - Portfolio Webpage</h1>
+            <p>Software Developer</p>
+        </div>
+
+        <img class="profile-image" src="images/hornet.jpg" alt="Portrait of Kostas Iliadis">
+
+        <nav aria-label="Main navigation">
+            <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"
+                aria-controls="primary-navigation" hidden>
+                <span aria-hidden="true">&#9776;</span>
+            </button>
+            <ul id="primary-navigation">
+                <li><a href="#about-me">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about-me">
+        <article>
+            <h2>About me</h2>
+            <p>
+                I am a graduate of [---------------------] and received my [-------------------------------] from the department of 
+                [-------------------------------------]. Having worked for three years in the industry of XR application development, I 
+                am familiar with the Unity game engine and strong in C# scripting. I am currently attending a .NET full stack specialization 
+                to broaden my knowledge of web development, while also developing my own desktop 2D platformer game working with Unity.
+            </p>
+        </article>
+    </section>
+
+    <section id="projects">
+        <h2>My projects</h2>
+        <ul>
+            <li>
+                <article>
+                    <h3>Crypto Viewer</h3>
+                    <p>An android application for viewing crypto stats. For its development I used IntelliJ IDEA,
+                        Kotlin, Jetpack Compose and Room.
+                    </p>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <h3>Cassiopeia</h3>
+                    <p>A desktop 2D platformer game, with challenging bosses, mindbreaking puzzles and captivating story.
+                        For the development I used the Unity game engine, and 2D hand drawn assets made in Krita.
+                    </p>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <h3>This webpage</h3>
+                    <p>A webpage to apply what I learned on HTML, CSS and JavaScript. For the development I am using 
+                        Microsoft Visual Studio Code and Github Copilot.
+                    </p>
+                </article>
+            </li>
+        </ul>
+    </section>
+
+    <section id="skills">
+        <h2>My technical skills</h2>
+        <ul>
+            <li>
+                <img src="images/unity-logo.png" alt="Unity logo">
+                Unity (Unity3D, C# scripting, animations, timelines, Unity Photon, Input System, XR Interaction Toolkit)
+            </li>
+            <li>
+                <img src="images/c-logo.png" alt="C programming language logo">
+                C,
+                <img src="images/cpp-logo.png" alt="C++ programming language logo">
+                C++,
+                <img src="images/opengl-logo.png" alt="OpenGL logo">
+                OpenGL
+            </li>
+            <li>
+                Blender
+                <img src="images/blender-logo.png" alt="Blender logo">
+                (modeling, texturing and Python scripting)
+            </li>
+            <li>
+                Backend (C#
+                <img src="images/csharp-logo.png" alt="C sharp programming language logo">,
+                LINQ)
+            </li>
+            <li>
+                Frontend (HTML
+                <img src="images/html-logo.png" alt="HTML logo">,
+                CSS
+                <img src="images/css-logo.png" alt="CSS logo">,
+                JavaScript
+                <img src="images/javascript-logo.png" alt="JavaScript logo">)
+            </li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Have a question or want to work together? Send me a message!</p>
+
+        <form action="/contact" method="post">
+            <div>
+                <label for="name">Your name</label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+            </div>
+
+            <div>
+                <label for="email">Your email</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+
+            <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+
+            <button type="submit">Send message</button>
+        </form>
+    </section>
+
+
+    <footer>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

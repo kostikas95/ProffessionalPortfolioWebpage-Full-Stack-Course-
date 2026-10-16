@@ -1,0 +1,342 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    padding: 1.5rem;
+    color: #ffffff;
+    background-color: #1f2937;
+    border-radius: 8px;
+}
+
+.header-intro {
+    margin-right: auto;
+}
+
+.header-intro h1 {
+    margin: 0;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.header-intro p {
+    margin: 0.5rem 0 0;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.site-header nav {
+    flex-basis: 100%;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.site-header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#primary-navigation[hidden] {
+    display: none;
+}
+
+.site-header nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.site-header nav a:hover {
+    text-decoration: underline;
+}
+
+.site-header nav a:focus-visible {
+    outline: 3px solid #fbbf24;
+    outline-offset: 4px;
+}
+
+#about-me {
+    max-width: 760px;
+    margin: 2.5rem auto;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+#about-me h2 {
+    margin: 0 0 1rem;
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+#about-me p {
+    max-width: 60ch;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    text-align: left;
+}
+
+#projects {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+}
+
+#projects h2 {
+    margin: 0 0 1.25rem;
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+#projects ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#projects li {
+    display: flex;
+    flex: 1 1 260px;
+}
+
+#projects article {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 8px;
+    line-height: 1.6;
+}
+
+#projects li:nth-child(3n + 1) article {
+    background-color: #e0f2fe;
+}
+
+#projects li:nth-child(3n + 2) article {
+    background-color: #ecfccb;
+}
+
+#projects li:nth-child(3n) article {
+    background-color: #fef3c7;
+}
+
+#projects article h3 {
+    margin: 0 0 0.75rem;
+}
+
+#projects article p {
+    margin: 0;
+}
+
+#skills li img {
+    height: 1.2em;
+    width: auto;
+    vertical-align: middle;
+    margin: 0 0.15em;
+    object-fit: contain;
+}
+
+#contact {
+    max-width: 760px;
+    margin: 2.5rem auto;
+}
+
+#contact h2,
+#contact > p {
+    text-align: center;
+}
+
+#contact form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1.5rem auto 0;
+}
+
+#contact form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+#contact form > div:nth-of-type(3) {
+    grid-column: 1 / -1;
+}
+
+#contact input,
+#contact textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.75rem;
+    font: inherit;
+    border: 1px solid #9ca3af;
+    border-radius: 4px;
+}
+
+#contact textarea {
+    min-height: 10rem;
+    resize: vertical;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    outline: 3px solid #93c5fd;
+    outline-offset: 2px;
+}
+
+#contact button {
+    justify-self: start;
+    padding: 0.7rem 1rem;
+    font: inherit;
+    color: #ffffff;
+    background-color: #1f2937;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #374151;
+}
+
+@media (max-width: 800px) {
+    body {
+        padding: 16px;
+    }
+
+    .site-header {
+        gap: 1rem;
+        padding: 1.25rem;
+    }
+
+    #about-me,
+    #projects,
+    #contact {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 769px) {
+    .site-header nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.75rem;
+    }
+
+    .menu-toggle:not([hidden]) {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 44px;
+        min-height: 44px;
+        padding: 0.5rem;
+        color: #ffffff;
+        background: transparent;
+        border: 1px solid #ffffff;
+        border-radius: 4px;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .menu-toggle:focus-visible {
+        outline: 3px solid #fbbf24;
+        outline-offset: 3px;
+    }
+
+    .site-header nav ul {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.75rem;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    .site-header {
+        padding: 1rem;
+    }
+
+    .header-intro {
+        flex: 1 1 100%;
+        margin-right: 0;
+    }
+
+    .profile-image {
+        width: 88px;
+        height: 88px;
+    }
+
+    .site-header nav ul {
+        gap: 0.75rem 1rem;
+    }
+
+    #about-me {
+        padding: 1rem;
+    }
+
+    #about-me h2,
+    #projects h2 {
+        font-size: 1.5rem;
+    }
+
+    #projects li {
+        flex-basis: 100%;
+    }
+
+    #projects article {
+        padding: 1.25rem;
+    }
+
+    #skills {
+        overflow-wrap: anywhere;
+    }
+
+    #contact form {
+        grid-template-columns: 1fr;
+    }
+
+    #contact form > div:nth-of-type(3) {
+        grid-column: auto;
+    }
+
+    #contact input,
+    #contact textarea {
+        padding: 0.65rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
